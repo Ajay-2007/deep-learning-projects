@@ -28,6 +28,7 @@ batch_size = 64
 units = 256
 dropout = 0.2
 
+
 # model is RNN with 256 units, input is 28-dim vector 28 timesteps
 model = Sequential()
 

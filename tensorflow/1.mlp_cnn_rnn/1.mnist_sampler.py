@@ -28,6 +28,7 @@ for i in range(len(indexes)):
     plt.imshow(image, cmap='gray')
     plt.axis('off')
 
+
 plt.savefig("mnist-samples.png")
 plt.show()
 plt.close('all')

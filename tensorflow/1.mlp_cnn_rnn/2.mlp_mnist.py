@@ -33,6 +33,7 @@ batch_size = 64
 hidde_units = 128
 dropout = 0.45
 
+
 # model is a 3-layer MLP with ReLU and dropout after each layer
 model = Sequential()
 model.add(Dense(hidde_units, input_dim=input_size))

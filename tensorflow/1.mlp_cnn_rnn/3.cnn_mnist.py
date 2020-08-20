@@ -19,6 +19,7 @@ y_test = to_categorical(y_test)
 # input image dimensions
 image_size = x_test.shape[1]
 
+
 # resize and normalize
 x_train = np.reshape(x_train, [-1, image_size, image_size, 1])
 
