@@ -1,0 +1,55 @@
+[2021-08-22 10:47:49,736] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: example_python_operator.print_the_context 2021-08-22T10:47:45.587392+00:00 [queued]>
+[2021-08-22 10:47:49,811] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: example_python_operator.print_the_context 2021-08-22T10:47:45.587392+00:00 [queued]>
+[2021-08-22 10:47:49,812] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-22 10:47:49,812] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2021-08-22 10:47:49,812] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-22 10:47:49,841] {taskinstance.py:1107} INFO - Executing <Task(PythonOperator): print_the_context> on 2021-08-22T10:47:45.587392+00:00
+[2021-08-22 10:47:49,856] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'example_python_operator', 'print_the_context', '2021-08-22T10:47:45.587392+00:00', '--job-id', '3', '--pool', 'default_pool', '--raw', '--subdir', '/home/***/.local/lib/python3.6/site-packages/***/example_dags/example_python_operator.py', '--cfg-path', '/tmp/tmp2t4u8bdj', '--error-file', '/tmp/tmphqnpxoz7']
+[2021-08-22 10:47:49,857] {standard_task_runner.py:77} INFO - Job 3: Subtask print_the_context
+[2021-08-22 10:47:49,846] {standard_task_runner.py:52} INFO - Started process 622 to run task
+[2021-08-22 10:47:50,007] {logging_mixin.py:104} INFO - Running <TaskInstance: example_python_operator.print_the_context 2021-08-22T10:47:45.587392+00:00 [running]> on host 8509baff7e0e
+[2021-08-22 10:47:50,234] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=example_python_operator
+AIRFLOW_CTX_TASK_ID=print_the_context
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-22T10:47:45.587392+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-08-22T10:47:45.587392+00:00
+[2021-08-22 10:47:50,349] {logging_mixin.py:104} INFO - {'conf': <***.configuration.AirflowConfigParser object at 0x7fb004d17630>,
+ 'dag': <DAG: example_python_operator>,
+ 'dag_run': <DagRun example_python_operator @ 2021-08-22 10:47:45.587392+00:00: manual__2021-08-22T10:47:45.587392+00:00, externally triggered: True>,
+ 'ds_nodash': '20210822',
+ 'execution_date': DateTime(2021, 8, 22, 10, 47, 45, 587392, tzinfo=Timezone('+00:00')),
+ 'inlets': [],
+ 'macros': <module '***.macros' from '/home/***/.local/lib/python3.6/site-packages/***/macros/__init__.py'>,
+ 'next_ds': '2021-08-22',
+ 'next_ds_nodash': '20210822',
+ 'next_execution_date': DateTime(2021, 8, 22, 10, 47, 45, 587392, tzinfo=Timezone('+00:00')),
+ 'outlets': [],
+ 'params': {},
+ 'prev_ds': '2021-08-22',
+ 'prev_ds_nodash': '20210822',
+ 'prev_execution_date': DateTime(2021, 8, 22, 10, 47, 45, 587392, tzinfo=Timezone('+00:00')),
+ 'prev_execution_date_success': <Proxy at 0x7fb004cb4d48 with factory <function TaskInstance.get_template_context.<locals>.<lambda> at 0x7fafdeb21048>>,
+ 'prev_start_date_success': <Proxy at 0x7fafdea29648 with factory <function TaskInstance.get_template_context.<locals>.<lambda> at 0x7fafdea7d268>>,
+ 'run_id': 'manual__2021-08-22T10:47:45.587392+00:00',
+ 'task': <Task(PythonOperator): print_the_context>,
+ 'task_instance': <TaskInstance: example_python_operator.print_the_context 2021-08-22T10:47:45.587392+00:00 [running]>,
+ 'task_instance_key_str': 'example_python_operator__print_the_context__20210822',
+ 'templates_dict': None,
+ 'test_mode': False,
+ 'ti': <TaskInstance: example_python_operator.print_the_context 2021-08-22T10:47:45.587392+00:00 [running]>,
+ 'tomorrow_ds': '2021-08-23',
+ 'tomorrow_ds_nodash': '20210823',
+ 'ts': '2021-08-22T10:47:45.587392+00:00',
+ 'ts_nodash': '20210822T104745',
+ 'ts_nodash_with_tz': '20210822T104745.587392+0000',
+ 'var': {'json': None, 'value': None},
+ 'yesterday_ds': '2021-08-21',
+ 'yesterday_ds_nodash': '20210821'}
+[2021-08-22 10:47:50,349] {logging_mixin.py:104} INFO - 2021-08-22
+[2021-08-22 10:47:50,349] {python.py:151} INFO - Done. Returned value was: Whatever you return gets printed in the logs
+[2021-08-22 10:47:51,072] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=example_python_operator, task_id=print_the_context, execution_date=20210822T104745, start_date=20210822T104749, end_date=20210822T104751
+[2021-08-22 10:47:51,262] {taskinstance.py:1265} INFO - 5 downstream tasks scheduled from follow-on schedule check
+[2021-08-22 10:47:51,300] {local_task_job.py:149} INFO - Task exited with return code 0

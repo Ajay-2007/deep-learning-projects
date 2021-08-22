@@ -1,0 +1,33 @@
+[2021-08-22 14:48:53,188] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: download_rocket_launches.download_launches 2021-08-19T00:00:00+00:00 [queued]>
+[2021-08-22 14:48:53,671] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: download_rocket_launches.download_launches 2021-08-19T00:00:00+00:00 [queued]>
+[2021-08-22 14:48:53,672] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-22 14:48:53,672] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2021-08-22 14:48:53,672] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-22 14:48:54,684] {taskinstance.py:1107} INFO - Executing <Task(BashOperator): download_launches> on 2021-08-19T00:00:00+00:00
+[2021-08-22 14:48:54,746] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'download_rocket_launches', 'download_launches', '2021-08-19T00:00:00+00:00', '--job-id', '45', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/1.rocket_launch_data.py', '--cfg-path', '/tmp/tmpvqweo0bd', '--error-file', '/tmp/tmpkm1jryhn']
+[2021-08-22 14:48:54,768] {standard_task_runner.py:77} INFO - Job 45: Subtask download_launches
+[2021-08-22 14:48:54,726] {standard_task_runner.py:52} INFO - Started process 136 to run task
+[2021-08-22 14:48:56,166] {logging_mixin.py:104} INFO - Running <TaskInstance: download_rocket_launches.download_launches 2021-08-19T00:00:00+00:00 [running]> on host b4dfeeeb641c
+[2021-08-22 14:48:57,774] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=download_rocket_launches
+AIRFLOW_CTX_TASK_ID=download_launches
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-19T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-08-19T00:00:00+00:00
+[2021-08-22 14:48:57,776] {subprocess.py:52} INFO - Tmp dir root location: 
+ /tmp
+[2021-08-22 14:48:57,777] {subprocess.py:63} INFO - Running command: ['bash', '-c', "curl -o /tmp/launches.json -L 'https://ll.thespacedevs.com/2.0.0/launch/upcoming'"]
+[2021-08-22 14:48:57,841] {subprocess.py:74} INFO - Output:
+[2021-08-22 14:49:08,379] {subprocess.py:78} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2021-08-22 14:49:08,567] {subprocess.py:78} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
+[2021-08-22 14:49:09,354] {subprocess.py:78} INFO -   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+[2021-08-22 14:49:10,417] {subprocess.py:78} INFO -   0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100    71  100    71    0     0     34      0  0:00:02  0:00:02 --:--:--  1203
+[2021-08-22 14:49:10,490] {subprocess.py:82} INFO - Command exited with return code 0
+[2021-08-22 14:49:11,060] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=download_rocket_launches, task_id=download_launches, execution_date=20210819T000000, start_date=20210822T144853, end_date=20210822T144911
+[2021-08-22 14:49:11,702] {local_task_job.py:198} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2021-08-22 14:49:11,705] {process_utils.py:100} INFO - Sending Signals.SIGTERM to GPID 136
+[2021-08-22 14:49:11,741] {taskinstance.py:1284} ERROR - Received SIGTERM. Terminating subprocesses.
+[2021-08-22 14:49:11,755] {subprocess.py:88} INFO - Sending SIGTERM signal to process group
+[2021-08-22 14:49:11,851] {process_utils.py:66} INFO - Process psutil.Process(pid=136, status='terminated', exitcode=1, started='14:48:54') (136) terminated with exit code 1

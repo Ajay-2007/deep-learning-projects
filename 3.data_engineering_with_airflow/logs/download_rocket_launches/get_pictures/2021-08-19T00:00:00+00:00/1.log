@@ -1,0 +1,35 @@
+[2021-08-22 14:49:16,056] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: download_rocket_launches.get_pictures 2021-08-19T00:00:00+00:00 [queued]>
+[2021-08-22 14:49:16,324] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: download_rocket_launches.get_pictures 2021-08-19T00:00:00+00:00 [queued]>
+[2021-08-22 14:49:16,324] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-22 14:49:16,325] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2021-08-22 14:49:16,325] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-22 14:49:17,015] {taskinstance.py:1107} INFO - Executing <Task(PythonOperator): get_pictures> on 2021-08-19T00:00:00+00:00
+[2021-08-22 14:49:17,029] {standard_task_runner.py:52} INFO - Started process 188 to run task
+[2021-08-22 14:49:17,241] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'download_rocket_launches', 'get_pictures', '2021-08-19T00:00:00+00:00', '--job-id', '57', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/download_rocket_launches.py', '--cfg-path', '/tmp/tmpoq3ho2ts', '--error-file', '/tmp/tmp9xl1417n']
+[2021-08-22 14:49:17,242] {standard_task_runner.py:77} INFO - Job 57: Subtask get_pictures
+[2021-08-22 14:49:18,061] {logging_mixin.py:104} INFO - Running <TaskInstance: download_rocket_launches.get_pictures 2021-08-19T00:00:00+00:00 [running]> on host b4dfeeeb641c
+[2021-08-22 14:49:18,770] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=download_rocket_launches
+AIRFLOW_CTX_TASK_ID=get_pictures
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-19T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-08-19T00:00:00+00:00
+[2021-08-22 14:49:18,790] {taskinstance.py:1501} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1157, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1331, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1361, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 150, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 161, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/download_rocket_launches.py", line 35, in _get_pictures
+    image_urls = [launch["image"] for launch in launches["results"]]
+KeyError: 'results'
+[2021-08-22 14:49:18,877] {taskinstance.py:1551} INFO - Marking task as FAILED. dag_id=download_rocket_launches, task_id=get_pictures, execution_date=20210819T000000, start_date=20210822T144916, end_date=20210822T144918
+[2021-08-22 14:49:19,315] {local_task_job.py:149} INFO - Task exited with return code 1

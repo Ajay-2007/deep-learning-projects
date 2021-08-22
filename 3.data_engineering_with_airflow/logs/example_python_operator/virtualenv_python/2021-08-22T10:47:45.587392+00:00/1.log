@@ -1,0 +1,55 @@
+[2021-08-22 10:47:49,785] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: example_python_operator.virtualenv_python 2021-08-22T10:47:45.587392+00:00 [queued]>
+[2021-08-22 10:47:49,861] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: example_python_operator.virtualenv_python 2021-08-22T10:47:45.587392+00:00 [queued]>
+[2021-08-22 10:47:49,861] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-22 10:47:49,862] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2021-08-22 10:47:49,862] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-22 10:47:49,908] {taskinstance.py:1107} INFO - Executing <Task(PythonVirtualenvOperator): virtualenv_python> on 2021-08-22T10:47:45.587392+00:00
+[2021-08-22 10:47:49,918] {standard_task_runner.py:52} INFO - Started process 623 to run task
+[2021-08-22 10:47:49,938] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'example_python_operator', 'virtualenv_python', '2021-08-22T10:47:45.587392+00:00', '--job-id', '2', '--pool', 'default_pool', '--raw', '--subdir', '/home/***/.local/lib/python3.6/site-packages/***/example_dags/example_python_operator.py', '--cfg-path', '/tmp/tmpr66gcxsv', '--error-file', '/tmp/tmpsmyhuynk']
+[2021-08-22 10:47:49,947] {standard_task_runner.py:77} INFO - Job 2: Subtask virtualenv_python
+[2021-08-22 10:47:50,101] {logging_mixin.py:104} INFO - Running <TaskInstance: example_python_operator.virtualenv_python 2021-08-22T10:47:45.587392+00:00 [running]> on host 8509baff7e0e
+[2021-08-22 10:47:50,558] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=example_python_operator
+AIRFLOW_CTX_TASK_ID=virtualenv_python
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-22T10:47:45.587392+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-08-22T10:47:45.587392+00:00
+[2021-08-22 10:47:50,560] {process_utils.py:135} INFO - Executing cmd: virtualenv /tmp/venvr8z5rw75
+[2021-08-22 10:47:50,619] {process_utils.py:139} INFO - Output:
+[2021-08-22 10:47:54,216] {process_utils.py:143} INFO - created virtual environment CPython3.6.13.final.0-64 in 2586ms
+[2021-08-22 10:47:54,216] {process_utils.py:143} INFO -   creator CPython3Posix(dest=/tmp/venvr8z5rw75, clear=False, no_vcs_ignore=False, global=False)
+[2021-08-22 10:47:54,217] {process_utils.py:143} INFO -   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/tmp/tmp6255z0hz)
+[2021-08-22 10:47:54,217] {process_utils.py:143} INFO -     added seed packages: pip==21.1.2, setuptools==57.0.0, wheel==0.36.2
+[2021-08-22 10:47:54,217] {process_utils.py:143} INFO -   activators BashActivator,CShellActivator,FishActivator,PowerShellActivator,PythonActivator,XonshActivator
+[2021-08-22 10:47:54,379] {process_utils.py:135} INFO - Executing cmd: /tmp/venvr8z5rw75/bin/pip install colorama==0.4.0
+[2021-08-22 10:47:54,402] {process_utils.py:139} INFO - Output:
+[2021-08-22 10:47:56,879] {process_utils.py:143} INFO - WARNING: The directory '/home/***/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+[2021-08-22 10:47:57,809] {process_utils.py:143} INFO - Collecting colorama==0.4.0
+[2021-08-22 10:47:58,252] {process_utils.py:143} INFO -   Downloading colorama-0.4.0-py2.py3-none-any.whl (21 kB)
+[2021-08-22 10:47:58,341] {process_utils.py:143} INFO - Installing collected packages: colorama
+[2021-08-22 10:47:58,496] {process_utils.py:143} INFO - Successfully installed colorama-0.4.0
+[2021-08-22 10:47:58,887] {process_utils.py:143} INFO - WARNING: You are using pip version 21.1.2; however, version 21.2.4 is available.
+[2021-08-22 10:47:58,887] {process_utils.py:143} INFO - You should consider upgrading via the '/tmp/venvr8z5rw75/bin/python -m pip install --upgrade pip' command.
+[2021-08-22 10:47:59,017] {process_utils.py:135} INFO - Executing cmd: /tmp/venvr8z5rw75/bin/python /tmp/venvr8z5rw75/script.py /tmp/venvr8z5rw75/script.in /tmp/venvr8z5rw75/script.out /tmp/venvr8z5rw75/string_args.txt
+[2021-08-22 10:47:59,026] {process_utils.py:139} INFO - Output:
+[2021-08-22 10:47:59,081] {process_utils.py:143} INFO - [31msome red text
+[2021-08-22 10:47:59,081] {process_utils.py:143} INFO - [42mand with a green background
+[2021-08-22 10:47:59,081] {process_utils.py:143} INFO - [2mand in dim text
+[2021-08-22 10:47:59,082] {process_utils.py:143} INFO - [0m
+[2021-08-22 10:47:59,082] {process_utils.py:143} INFO - [2mPlease wait...
+[2021-08-22 10:48:09,092] {process_utils.py:143} INFO - [2mPlease wait...
+[2021-08-22 10:48:19,099] {process_utils.py:143} INFO - [2mPlease wait...
+[2021-08-22 10:48:29,107] {process_utils.py:143} INFO - [2mPlease wait...
+[2021-08-22 10:48:39,115] {process_utils.py:143} INFO - [2mPlease wait...
+[2021-08-22 10:48:49,125] {process_utils.py:143} INFO - [2mPlease wait...
+[2021-08-22 10:48:59,131] {process_utils.py:143} INFO - [2mPlease wait...
+[2021-08-22 10:49:09,139] {process_utils.py:143} INFO - [2mPlease wait...
+[2021-08-22 10:49:19,148] {process_utils.py:143} INFO - [2mPlease wait...
+[2021-08-22 10:49:29,155] {process_utils.py:143} INFO - [2mPlease wait...
+[2021-08-22 10:49:39,163] {process_utils.py:143} INFO - Finished
+[2021-08-22 10:49:39,252] {python.py:151} INFO - Done. Returned value was: None
+[2021-08-22 10:49:39,345] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=example_python_operator, task_id=virtualenv_python, execution_date=20210822T104745, start_date=20210822T104749, end_date=20210822T104939
+[2021-08-22 10:49:39,446] {taskinstance.py:1265} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-08-22 10:49:39,469] {local_task_job.py:149} INFO - Task exited with return code 0
